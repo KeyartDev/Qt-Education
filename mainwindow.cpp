@@ -7,8 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
-
     ui->list->setSelectionMode(QAbstractItemView::MultiSelection);
 }
 
@@ -21,9 +19,17 @@ MainWindow::~MainWindow()
 void MainWindow::on_add_clicked()
 {
     inputData = ui->input->text();
-    lwi = new QListWidgetItem(inputData, ui->list);
-    ui->input->clear();
-    ui->input->setFocus(Qt::OtherFocusReason);
+    if (!inputData.isEmpty())
+    {
+        lwi = new QListWidgetItem(inputData, ui->list);
+        ui->input->clear();
+        ui->input->setFocus(Qt::OtherFocusReason);
+    } else
+    {
+        QMessageBox* box = new QMessageBox("Ошибка!", "Не удалось добавить элемент в список: пустое значение!", QMessageBox::Critical, QMessageBox::Ok, 0, 0, this);
+        box->show();
+    }
+
 }
 
 void MainWindow::on_remove_clicked()

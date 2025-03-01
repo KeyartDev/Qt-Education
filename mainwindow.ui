@@ -26,7 +26,7 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="main">
        <attribute name="title">
         <string>Основная</string>
        </attribute>
@@ -45,7 +45,7 @@
          <rect>
           <x>270</x>
           <y>10</y>
-          <width>171</width>
+          <width>201</width>
           <height>26</height>
          </rect>
         </property>
@@ -55,25 +55,31 @@
          <rect>
           <x>270</x>
           <y>40</y>
-          <width>81</width>
+          <width>101</width>
           <height>26</height>
          </rect>
         </property>
         <property name="text">
          <string>Добавить</string>
         </property>
+        <property name="icon">
+         <iconset theme="list-add"/>
+        </property>
        </widget>
        <widget class="QPushButton" name="remove">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>380</x>
           <y>40</y>
-          <width>81</width>
+          <width>91</width>
           <height>26</height>
          </rect>
         </property>
         <property name="text">
          <string>Удалить</string>
+        </property>
+        <property name="icon">
+         <iconset theme="list-remove"/>
         </property>
        </widget>
        <widget class="QPushButton" name="removeAll">
@@ -81,16 +87,19 @@
          <rect>
           <x>270</x>
           <y>70</y>
-          <width>171</width>
+          <width>201</width>
           <height>26</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(224, 27, 36);</string>
         </property>
         <property name="text">
          <string>Удалить всё</string>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_2">
+      <widget class="QWidget" name="additional">
        <attribute name="title">
         <string>Дополнительная</string>
        </attribute>
