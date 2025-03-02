@@ -103,12 +103,49 @@
        <attribute name="title">
         <string>Дополнительная</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QTreeView" name="tree"/>
+          </item>
+          <item>
+           <widget class="QListView" name="list_2"/>
+          </item>
+          <item>
+           <widget class="QTableView" name="table"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Иерархия</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QTreeView" name="treeIe"/>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>list</tabstop>
+  <tabstop>input</tabstop>
+  <tabstop>add</tabstop>
+  <tabstop>remove</tabstop>
+  <tabstop>removeAll</tabstop>
+  <tabstop>tree</tabstop>
+  <tabstop>table</tabstop>
+  <tabstop>list_2</tabstop>
+  <tabstop>treeIe</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

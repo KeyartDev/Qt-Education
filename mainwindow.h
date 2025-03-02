@@ -2,12 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "QSplitter"
-#include "QTextEdit"
+#include <QtWidgets>
 #include "passwordvalidator.h"
-#include "QListWidgetItem"
-#include "QList"
-#include "QMessageBox"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -31,11 +27,16 @@ private slots:
 
     void on_removeAll_clicked();
 
+    void on_input_returnPressed();
+
 private:
     Ui::MainWindow *ui;
 
     PasswordValidator* validator;
     QListWidgetItem* lwi;
     QString inputData;
+    QStringListModel model;
+    QItemSelectionModel selection = QItemSelectionModel(&model);
+    QStandardItemModel model2 = QStandardItemModel(5, 3);
 };
 #endif // MAINWINDOW_H
